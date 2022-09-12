@@ -34,23 +34,25 @@ declare const commentPattern: ((filename: string) => {
       }
     ];
   };
-  allPatterns: () => {
-    name: string;
-    nameMatchers: Array<string>;
-    multiLineComment?: [
-      {
-        start: RegExp | string;
-        middle?: RegExp | string;
-        end: RegExp | string;
-        apidoc?: true;
-      }
-    ];
-    singleLineComment?: [
-      {
-        start: RegExp | string;
-      }
-    ];
-  };
+  allPatterns: () => [
+    {
+      name: string;
+      nameMatchers: Array<string>;
+      multiLineComment?: [
+        {
+          start: RegExp | string;
+          middle?: RegExp | string;
+          end: RegExp | string;
+          apidoc?: true;
+        }
+      ];
+      singleLineComment?: [
+        {
+          start: RegExp | string;
+        }
+      ];
+    }
+  ];
 };
 
 export default commentPattern;
