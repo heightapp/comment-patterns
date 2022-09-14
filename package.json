@@ -9,7 +9,6 @@
     "test": "node build/generate-db.js && jasmine",
     "test-with-standard": "node build/generate-db.js && jasmine && standard",
     "prepublish": "node build/generate-db.js",
-    "update-from-groc": "node build/update-from-groc.js",
     "preformat": "standard --version || npm -g install standard",
     "format": "standard --format"
   },
